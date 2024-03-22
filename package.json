@@ -1,6 +1,12 @@
 {
   "dependencies": {
+
+ 
+
+
+    "vite": "^5.2.2",
     "@reduxjs/toolkit": "^2.2.2",
     "react-redux": "^9.1.0"
+
   }
 }

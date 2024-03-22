@@ -1,0 +1,13 @@
+.order {
+  display: flex;
+  flex-direction: column;
+
+
+  .order__itemName {
+
+  }
+
+  .order__itemPrice {
+
+  }
+}

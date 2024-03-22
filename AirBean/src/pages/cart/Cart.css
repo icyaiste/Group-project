@@ -1,0 +1,35 @@
+.cart {
+
+  .cart__title {
+
+  }
+
+  .cart__orderSection {
+
+  }
+
+  .cart__costContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .costContainer__totalText {
+
+    }
+
+    .costContainer__dots {
+
+    }
+
+    .costContainer__totalPrice {
+
+    }
+  }
+
+  .cart__costRelatedInfo {
+
+  }
+
+  .cart__orderBtn {
+
+  }
+}

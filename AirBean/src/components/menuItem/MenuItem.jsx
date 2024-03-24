@@ -2,8 +2,8 @@ import React from 'react'
 
 
 //send props to MenuItem from Menu
-function MenuItem() {
-
+function MenuItem(props) {
+ const {menuItem} = props;
 
   return ( 
     <div key={menuItem.id} >

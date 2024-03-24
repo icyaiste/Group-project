@@ -9,7 +9,8 @@ function Menu() {
     try {
       const response = await fetch('https://airbean-api-xjlcn.ondigitalocean.app/api/beans')
       const data = await response.json();
-      setMenuItems(data);
+      console.log(data);
+      setMenuItems(data.menu);
     } catch (error) {
       console.error('Error has occured', error);
     }
@@ -21,16 +22,15 @@ function Menu() {
 
   function displayMenuItems() {
     return menuItems && menuItems.map((menuItem) => {
-      console.log(menuItem);
+      //console.log(menuItem);
 
       return (
-        <div >
-          {MenuItem}
+        <div key={menuItem.id}>
+          <MenuItem menuItem={menuItem}/>
         </div>
       )
     })
   }
-
 
 
   return (

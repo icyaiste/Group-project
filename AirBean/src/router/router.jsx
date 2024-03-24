@@ -1,11 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { Home } from '../pages/home';
-import { About } from '../pages/about';
-import { Navigation } from '../pages/navigation';
-import { Menu } from '../pages/menu';
-import { Cart } from '../pages/cart';
-import { Status } from '../pages/status';
+import Home from '../pages/home/Home';
+import About from '../pages/about/About';
+import Navigation from '../pages/navigation/Navigation';
+import Menu from '../pages/menu/Menu';
+import Cart from '../pages/cart/Cart';
+import Status from '../pages/status/Status';
+
 
 const router = createBrowserRouter([
     {
@@ -33,3 +34,5 @@ const router = createBrowserRouter([
         element: <Status />
     }
 ]);
+
+export default router;

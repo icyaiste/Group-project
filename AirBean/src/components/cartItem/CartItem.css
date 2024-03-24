@@ -1,13 +1,19 @@
 .order {
   display: flex;
   flex-direction: column;
+  color: rgba(47, 41, 38, 1);
 
+  .order__titleAndDots {
+    display: flex;
+    justify-content: space-between;
+  }
 
   .order__itemName {
-
+    color: rgba(47, 41, 38, 1);
   }
 
   .order__itemPrice {
-
+    text-align: start;
+    font-size: 0.8rem;
   }
 }

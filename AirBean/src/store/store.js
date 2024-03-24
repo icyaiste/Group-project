@@ -1,9 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
+import resetCart from "../reducers/orderReducer";
+import registerOrder from "../reducers/orderReducer";
 
 const store = configureStore({
     reducer: {
-        // Add reducers here
-    },
+        cart: resetCart,
+        cart: registerOrder
+    }
 });
 
-export default store
+export default store;

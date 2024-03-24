@@ -1,7 +1,11 @@
 .cart {
+  background-color: white;
+  color: rgba(47, 41, 38, 1);
+  padding: 5%;
+  width: fit-content;
 
   .cart__title {
-
+    
   }
 
   .cart__orderSection {
@@ -26,10 +30,19 @@
   }
 
   .cart__costRelatedInfo {
-
+    font-size: 0.8rem;
   }
 
   .cart__orderBtn {
+    background-color: rgba(47, 41, 38, 1);
+    color: white;
+    padding: 4% 8%;
+    border-radius: 15px;
+    border: none;
+    font-weight: 600;
+  }
 
+  .cart__orderBtn:hover {
+    background-color: rgba(47, 41, 38, 0.7);
   }
 }

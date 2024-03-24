@@ -1,10 +1,17 @@
 import './CartItem.css';
 
-function CartItem() {
+function CartItem(props) {
+
+  const { name, price } = props.data;
+
   return(
     <article className='order'>
-      <h4 className="order__itemName">{/* Insert article name */}</h4>
-      <p className="order__itemPrice">{/* Insert item price */} kr</p>
+      <section className="order__titleAndDots">
+        <h4 className="order__itemName">{ name }</h4>
+        <p className="order__dots">.................</p>
+      </section>
+      
+      <p className="order__itemPrice">{ price } kr</p>
     </article>
   );
 }

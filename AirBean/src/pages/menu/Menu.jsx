@@ -1,9 +1,12 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import MenuItem from '../../components/menuItem/MenuItem';
+import { useNavigate } from 'react-router-dom';
 
 function Menu() {
   const [menuItems, setMenuItems] = useState([]);
+
+  const navigate = useNavigate();
 
   async function fetchMenuItems() {
     try {
@@ -25,9 +28,9 @@ function Menu() {
       //console.log(menuItem);
 
       return (
-        <div key={menuItem.id}>
-          <MenuItem menuItem={menuItem}/>
-        </div>
+        <article key={menuItem.id}>
+          <MenuItem menuItem={menuItem} />
+        </article>
       )
     })
   }

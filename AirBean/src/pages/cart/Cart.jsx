@@ -20,7 +20,7 @@ function Cart() {
   const handleRegisterOrder = () => {
     dispatch(registerOrder({name: 'charlie', job: 'artist', price: 10}));
     /* dispatch(resetCart([])); */
-    dispatch(registerOrder2());
+    /* dispatch(registerOrder2()); */
   }
 
   async function registerOrder2() {

@@ -1,6 +1,0 @@
-Deepa
-
-Rikard
-
-Aiste
-

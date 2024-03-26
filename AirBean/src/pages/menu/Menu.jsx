@@ -10,7 +10,7 @@ function Menu() {
 
   async function fetchMenuItems() {
     try {
-      const response = await fetch('https://airbean-api-xjlcn.ondigitalocean.app/api/beans')
+      const response = await fetch('https://airbean-9pcyw.ondigitalocean.app/api/beans')
       const data = await response.json();
       console.log(data);
       setMenuItems(data.menu);

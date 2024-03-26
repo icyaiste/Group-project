@@ -1,27 +1,24 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
-// import { useState } from 'react';
+import { useState } from 'react';
+import { AddToCart } from '../../reducers/Reducer';
+import { useDispatch } from 'react-redux';
+
 
 function MenuItem(props) {
   const { menuItem } = props;
 
-  // const [cartItems, setCartItems] = useState([]);
+  const dispatch = useDispatch();
 
-  const location = useLocation();
-  const navigate = useNavigate();
-  // console.log(location);
-
-  // const addTooCart = () => {
-  //   setCartItems(prevItems => [...prevItems, item]); // takes the previous state (prevItems) as its argument and returns a new state. New state is [...prevItems, item] )
-  //   console.log(cartItems);
-  // }
+  const [cartItems, setCartItems] = useState([]);
 
 
-  //onClick={() => addToCart(menuItem)}>Add</button>
+  const addToCart = () => {
+    dispatch(AddToCart(menuItem))
+  }
+
   return (
     <div key={menuItem.id} >
-      <button className='addToCartBtn' onClick={() => navigate('/cart' , {state: {menuItem}})}>Add</button>
+      <button className='addToCartBtn' onClick={addToCart}>Add</button>
       <article>
         <h2>{menuItem.title}</h2>
         <p>{menuItem.price}</p>

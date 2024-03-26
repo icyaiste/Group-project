@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import testSlice from "./reducers/Reducer";
+import MenuSlice from "./reducers/Reducer";
 
 const store = configureStore({
     reducer: {
-        mySlice: testSlice,// Add reducers here
+        Cart: MenuSlice,
     },
 });
 

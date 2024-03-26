@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import './styles.css';
 
 function Navigation() {
@@ -20,9 +22,9 @@ function Navigation() {
 
   return (
     <main className='content'>
-      <nav className='closingBtn'>
-        <img src="#" alt="closing button" />
-      </nav>
+  
+      <i class="fa-thin fa-circle-xmark" style="color: #f4f3f1;"></i>
+      
       <section className='pages'>
         <h1 onClick={goToMenuPage}>Meny</h1>
       <hr />

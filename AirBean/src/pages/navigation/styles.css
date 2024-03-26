@@ -21,10 +21,7 @@ main{
     justify-content: center;
 }
 
-.closingBtn{
-    display: flex;
-    justify-self: flex-start;
-}
+
 .pages{
     color: white;
 }

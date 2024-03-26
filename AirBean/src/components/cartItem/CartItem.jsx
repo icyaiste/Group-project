@@ -2,12 +2,12 @@ import './CartItem.css';
 
 function CartItem(props) {
 
-  const { name, price } = props.data;
+  const { title, price } = props.data;
 
   return(
     <article className='order'>
       <section className="order__titleAndDots">
-        <h4 className="order__itemName">{ name }</h4>
+        <h4 className="order__itemName">{ title }</h4>
         <p className="order__dots">.................</p>
       </section>
       

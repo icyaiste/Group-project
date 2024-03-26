@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+/* import { configureStore } from "@reduxjs/toolkit";
 import MenuSlice from "./reducers/Reducer";
 
 const store = configureStore({
@@ -7,4 +7,4 @@ const store = configureStore({
     },
 });
 
-export default store
+export default store */

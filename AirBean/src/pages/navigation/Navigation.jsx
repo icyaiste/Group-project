@@ -24,11 +24,11 @@ function Navigation() {
         <img src="#" alt="closing button" />
       </nav>
       <section>
-        <h1 onClick={goToMenuPage}>Meny</h1>
+        <button onClick={goToMenuPage}>Meny</button>
         <div className='line'></div>
-        <h1 onClick={goToAboutPage}>Vårt kaffe</h1>
+        <button onClick={goToAboutPage}>Vårt kaffe</button>
         <div className='line'></div>
-        <h1 onClick={goToStatusPage}>Orderstatus</h1>
+        <button onClick={goToStatusPage}>Orderstatus</button>
         <div className='line'></div>
       </section>
     </main>

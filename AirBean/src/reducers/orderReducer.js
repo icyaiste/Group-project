@@ -6,7 +6,7 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    registerOrder(state, action) {
+    addToCart(state, action) {
       console.log(action.payload);
       return [...state, action.payload]
     },
@@ -16,6 +16,6 @@ const cartSlice = createSlice({
   }
 });
 
-export const { registerOrder, resetCart } = cartSlice.actions
+export const { addToCart, resetCart } = cartSlice.actions
 
 export default cartSlice.reducer;

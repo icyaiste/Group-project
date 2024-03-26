@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { AddToCart } from '../../reducers/Reducer';
+import { addToCart } from '../../reducers/orderReducer';
 import { useDispatch } from 'react-redux';
 
 
@@ -12,13 +12,13 @@ function MenuItem(props) {
   const [cartItems, setCartItems] = useState([]);
 
 
-  const addToCart = () => {
-    dispatch(AddToCart(menuItem))
+  const addedToCart = () => {
+    dispatch(addToCart(menuItem))
   }
 
   return (
     <div key={menuItem.id} >
-      <button className='addToCartBtn' onClick={addToCart}>Add</button>
+      <button className='addToCartBtn' onClick={addedToCart}>Add</button>
       <article>
         <h2>{menuItem.title}</h2>
         <p>{menuItem.price}</p>

@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 function Menu() {
   const [menuItems, setMenuItems] = useState([]);
 
-  const navigate = useNavigate();
-
   async function fetchMenuItems() {
     try {
       const response = await fetch('https://airbean-9pcyw.ondigitalocean.app/api/beans')

@@ -1,7 +1,7 @@
 import './Cart.css';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { registerOrder, resetCart } from '../../reducers/orderReducer';
+import { addToCart, resetCart } from '../../reducers/orderReducer';
 import CartItem from '../../components/cartItem/CartItem';
 
 function Cart() {
@@ -18,21 +18,20 @@ function Cart() {
   const dispatch = useDispatch()
 
   const handleRegisterOrder = () => {
-    dispatch(registerOrder({name: 'charlie', job: 'artist', price: 10}));
+    /* dispatch(addToCart({title: 'charlie', job: 'artist', price: 10})); */
     /* dispatch(resetCart([])); */
-    /* dispatch(registerOrder2()); */
+    dispatch(registerOrder2());
   }
 
   async function registerOrder2() {
     try {
-      const response = await fetch('https://airbean-api-xjlcn.ondigitalocean.app/api/beans/order', {
+      const response = await fetch('https://airbean-9pcyw.ondigitalocean.app/api/beans/order', {
       method: "POST",
-      body: JSON.stringify({details: { order: cartItems }}), 
+      body: JSON.stringify(cartItems), 
       headers: {
         'Content-Type': 'application/json' 
         }
       });
-      console.log(response);
       const data = await response.json();
       console.log(data);
 
@@ -46,7 +45,6 @@ function Cart() {
 
   if(cartItems){
     items = cartItems.map((obj, index) => {
-      console.log(obj);
       return <CartItem key={index} data={obj}/>
     });
   }

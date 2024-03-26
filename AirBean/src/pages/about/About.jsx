@@ -3,9 +3,10 @@ import './about-styles.css'
 
 function About() {
   return (
-    <div>
+    <div className='main'>
+      <img src="./images/graphics-header.svg" alt="header image" />
       <h1>Vårt kaffe</h1>
-      <section>
+      <section className='main_para'>
       <div>
       Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio, grounds dripper, crema, strong whipped, variety extra iced id lungo half and half mazagran. Pumpkin spice.
       </div>
@@ -17,7 +18,7 @@ function About() {
       </div>
       </section>
       <section>
-        <img src="" alt="Eva Cortado" />
+        <img src="./images/eva-cortado.jpg" alt="Eva Cortado" />
         <h2>Eva Cortado</h2>
         <h3>VD & Grundare</h3>
       </section>

@@ -1,0 +1,25 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  color: rgba(47, 41, 38, 1);
+  padding: 3% 0%;
+
+  .order__titleAndDots {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .order__itemName {
+    
+  }
+
+  .order__dots {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .order__itemPrice {
+    text-align: start;
+    font-size: 0.8rem;
+    font-family: "Work Sans", sans-serif;
+  }
+}

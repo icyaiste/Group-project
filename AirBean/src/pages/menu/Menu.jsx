@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import MenuItem from '../../components/menuItem/MenuItem';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Menu() {
   const [menuItems, setMenuItems] = useState([]);
@@ -44,6 +44,7 @@ function Menu() {
       </header>
       <h1>Menu</h1>
       <div>{displayMenuItems()}</div>
+      <Link to="/cart">Cart</Link>
     </section>
   )
 }

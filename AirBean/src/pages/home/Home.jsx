@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './style/home.css';
 
 function Home() {
@@ -14,6 +14,7 @@ function Home() {
             <img src="" alt="AirBean logo" />
             <h1>Air Bean</h1>
             <p>Dronedelivered coffee</p>
+            <Link to="/navigation">To Navigation</Link>
         </main>
     )
 }

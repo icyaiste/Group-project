@@ -12,15 +12,6 @@ function Cart() {
   const cartItems = useSelector((state) => state.cart);
   console.log(cartItems);
 
- /*  function formatCartItems(){
-    const filteredObjArr = cartItems.map((obj) => ({
-      title: obj.title,
-      price: obj.price
-    }));
-    console.log(filteredObjArr);
-    setOrderObj((prevData) => [...prevData, filteredObjArr] );
-  } */
-
   useEffect(() => {
     calcPrice();
     console.log(orderObj);
@@ -55,7 +46,7 @@ function Cart() {
       const data = await response.json();
       console.log(data);
 
-      /* dispatch(resetCart([])); */
+      dispatch(resetCart([]));
     } catch (error) {
       console.log(error);
     }
@@ -67,10 +58,6 @@ function Cart() {
     items = cartItems.map((obj, index) => {
       return <CartItem key={index} data={obj}/>
     });
-  }
-
-  if(cartItems.length > 1){
-   /*  formatCartItems(); */
   }
  
   function calcPrice() {

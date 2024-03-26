@@ -1,6 +1,4 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './styling/navigation.css';
+import React from 'react'
 
 function Navigation() {
 
@@ -19,20 +17,10 @@ function Navigation() {
   }
 
   return (
-    <main className='content'>
-      <nav className='closingBtn'>
-        <img src="#" alt="closing button" />
-      </nav>
-      <section>
-        <h1 onClick={goToMenuPage}>Meny</h1>
-        <div className='line'></div>
-        <h1 onClick={goToAboutPage}>Vårt kaffe</h1>
-        <div className='line'></div>
-        <h1 onClick={goToStatusPage}>Orderstatus</h1>
-        <div className='line'></div>
-      </section>
-    </main>
+    <div>
+      
+    </div>
   )
 }
 
-export default Navigation;
+export default Navigation

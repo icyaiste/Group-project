@@ -6,7 +6,7 @@ function App() {
 
   return (
     <main>
-       <RouterProvider router={ router } />
+      <RouterProvider router={router} />
     </main>
   )
 }

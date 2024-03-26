@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import MenuItem from '../../components/menuItem/MenuItem';
+import { Link } from 'react-router-dom';
 
 function Menu() {
   const [menuItems, setMenuItems] = useState([]);
@@ -9,7 +10,7 @@ function Menu() {
     try {
       const response = await fetch('https://airbean-api-xjlcn.ondigitalocean.app/api/beans')
       const data = await response.json();
-      setMenuItems(data);
+      setMenuItems(data.menu);
     } catch (error) {
       console.error('Error has occured', error);
     }
@@ -41,6 +42,7 @@ function Menu() {
       </header>
       <h1>Menu</h1>
       <div>{displayMenuItems()}</div>
+      <Link to="/cart">Cart</Link>
     </section>
   )
 }

@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, resetCart } from '../../reducers/orderReducer';
 import CartItem from '../../components/cartItem/CartItem';
 
+import {saveToLocalStorage} from '../../store/store';
+
 function Cart() {
 
   const [price, setPrice] = useState(0);
@@ -45,7 +47,7 @@ function Cart() {
       });
       const data = await response.json();
       console.log(data);
-
+       dispatch(saveToLocalStorage(data));
       dispatch(resetCart([]));
     } catch (error) {
       console.log(error);

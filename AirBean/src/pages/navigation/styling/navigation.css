@@ -18,10 +18,20 @@ main{
 .content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    margin-top: 350px;
 }
-
+.page_1,.page_2,.page_3{
+    font-size: 30px;
+}
 .closingBtn{
-    display: flex;
-    justify-self: flex-start;
+   width: 50px;
+   margin-top: 20px;
+   margin-left: 20px;
+   background-color: aliceblue;
+   border-radius: 50%;
+}
+hr{
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
 }

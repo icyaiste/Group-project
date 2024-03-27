@@ -4,14 +4,20 @@ import evacortado from "./images/eva-cortado.jpg"
 import graphicsheader from "./images/graphics-header.svg"
 import navicon from "./images/navicon.svg"
 import graphicsfooter from "./images/graphics-footer.svg"
+import { Navigate } from 'react-router-dom'
 
 function About() {
+const imageClick = () => {
+  console.log('clicked')
+Navigate ("/navigation");
+}
+
   return (
     <div className='main'>
       <div className='header'>
       <img src={graphicsheader} alt="header image" />
-      
-        <img src={navicon} alt="navicon image" className='navicon' />
+     
+        <img src={navicon} alt="navicon image" className='navicon' onClick={imageClick}/>
       
       <h1 className='header_name'>Vårt kaffe</h1>
       </div>

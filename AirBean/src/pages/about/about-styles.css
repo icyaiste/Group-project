@@ -1,4 +1,28 @@
-.main{
-    background-color: pink;
+.main_about{
+    background-color: rgba(243, 228, 225, 1);
     color: black;
+    width: 375px;
+    display: flex;
+  justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    
+}
+.footer{
+    text-align: center;
+}
+.header_name{
+    text-align: center;
+}
+.eva{
+    border-radius: 50%;
+}
+.main_para{
+    padding: 20px;
+}
+.navicon{
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    
 }

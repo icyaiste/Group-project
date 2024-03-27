@@ -1,0 +1,20 @@
+.main{
+    background-color: rgba(229, 103, 78, 1);
+  width: 375px;
+  display: flex;
+  justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+}
+.btn{
+    width: 184px;
+    height: 55px;
+    border-radius: 25%;
+    font-size: xx-large;
+    display: block;
+    margin: auto;
+}
+.img_para{
+    margin-top: 150px;
+}

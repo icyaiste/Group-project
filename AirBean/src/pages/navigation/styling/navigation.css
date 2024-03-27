@@ -2,14 +2,12 @@
     padding: 0;
 }
 
-body{
-    background-color: rgb(41, 34, 34);
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-}
 
-main{
+
+main_nav{
+    background-color: rgb(41, 34, 34);
+    width: 375px;
+    height: 100vh;
     height: 100vh;
     width: 100vw;
 }
@@ -26,8 +24,7 @@ main{
 }
 .closingBtn{
    width: 50px;
-   margin-top: 20px;
-   margin-left: 20px;
+   
    background-color: aliceblue;
    border-radius: 50%;
 }

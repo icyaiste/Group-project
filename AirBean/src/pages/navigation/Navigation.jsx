@@ -20,7 +20,7 @@ function Navigation() {
   }
 
   return (
-    <main >
+    <main className='main_nav' >
       <nav className='closingBtn'>
         <img src={close} alt="closing button" />
       </nav>

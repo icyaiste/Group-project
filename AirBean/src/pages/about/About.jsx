@@ -13,7 +13,7 @@ Navigate ("/navigation");
 }
 
   return (
-    <div className='main'>
+    <div className='main_about'>
       <div className='header'>
       <img src={graphicsheader} alt="header image" />
      

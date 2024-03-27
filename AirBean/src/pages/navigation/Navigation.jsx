@@ -1,8 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
-
-import './styles.css';
+import './styling/navigation.css';
 
 function Navigation() {
 
@@ -22,16 +20,16 @@ function Navigation() {
 
   return (
     <main className='content'>
-  
-      
-      
-      <section className='pages'>
-        <h1 onClick={goToMenuPage}>Meny</h1>
-      <hr />
-        <h1 onClick={goToAboutPage}>Vårt kaffe</h1>
-        <hr />
-        <h1 onClick={goToStatusPage}>Orderstatus</h1>
-    <hr />
+      <nav className='closingBtn'>
+        <img src="#" alt="closing button" />
+      </nav>
+      <section>
+        <button onClick={goToMenuPage}>Meny</button>
+        <div className='line'></div>
+        <button onClick={goToAboutPage}>Vårt kaffe</button>
+        <div className='line'></div>
+        <button onClick={goToStatusPage}>Orderstatus</button>
+        <div className='line'></div>
       </section>
     </main>
   )

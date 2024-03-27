@@ -1,0 +1,55 @@
+.cart {
+  background-color: white;
+  color: rgba(47, 41, 38, 1);
+  padding: 10%;
+  width: fit-content;
+  border-radius: 3px;
+
+  .cart__title {
+    
+  }
+
+  .cart__orderSection {
+
+  }
+
+  .cart__costContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .costContainer__totalText {
+
+    }
+
+    .costContainer__dots {
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    .costContainer__totalPrice {
+
+    }
+  }
+
+  .cart__costRelatedInfo {
+    text-align: start;
+    font-size: 0.7rem;
+  }
+
+  .cart__orderBtn {
+    background-color: rgba(47, 41, 38, 1);
+    color: white;
+    padding: 4% 8%;
+    border-radius: 15px;
+    border: none;
+    font-weight: 600;
+    margin: 5% 0;
+  }
+
+  .cart__orderBtn:hover {
+    background-color: rgba(47, 41, 38, 0.7);
+  }
+
+  .cart__orderBtn:active {
+    transform: scale(98%);
+  }
+}

@@ -1,10 +1,17 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import MenuItem from '../../components/menuItem/MenuItem';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import './Menu.css';
+import bag from '../../assets/assets/graphics/bag.svg';
+import navicon from '../../assets/assets/graphics/navicon.svg';
+import Cart from '../cart/Cart';
+
 
 function Menu() {
   const [menuItems, setMenuItems] = useState([]);
+
+  const navigate = useNavigate();
 
   async function fetchMenuItems() {
     try {
@@ -33,16 +40,24 @@ function Menu() {
     })
   }
 
+  const goToNavPage = () => {
+    navigate("/navigation");
+  }
+
+  const goToCartPage = () => {
+    navigate("/cart");
+  }
+
 
   return (
-    <section>
-      <header>
-        <img src="" alt="AirBean logo" />
-        <img src="" alt="CartLogo" />
+    <section className='menuSection'>
+      <header className="menuSection__header">
+        <button className="header__navBtn" onClick={ goToNavPage }><img src={ navicon } alt="Nav" /></button>
+        <button className="header__cartBtn" onClick={ goToCartPage }><img src={ bag } alt="Cart" /></button>
       </header>
       <h1>Menu</h1>
       <div>{displayMenuItems()}</div>
-      <Link to="/cart">Cart</Link>
+      <footer className='menuSection__footer'></footer>
     </section>
   )
 }

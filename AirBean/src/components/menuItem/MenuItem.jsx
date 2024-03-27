@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import { addToCart } from '../../reducers/orderReducer';
 import { useDispatch } from 'react-redux';
 
@@ -8,9 +7,6 @@ function MenuItem(props) {
   const { menuItem } = props;
 
   const dispatch = useDispatch();
-
-  const [cartItems, setCartItems] = useState([]);
-
 
   const addedToCart = () => {
     dispatch(addToCart(menuItem))

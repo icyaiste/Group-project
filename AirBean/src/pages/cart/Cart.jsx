@@ -7,21 +7,19 @@ import CartItem from '../../components/cartItem/CartItem';
 function Cart() {
 
   const [price, setPrice] = useState(0);
-  const [orderObj, setOrderObj] = useState([]);
-
+  
   const cartItems = useSelector((state) => state.cart);
   console.log(cartItems);
 
   useEffect(() => {
     calcPrice();
-    console.log(orderObj);
   }, [cartItems]);
 
   const dispatch = useDispatch()
 
   const handleRegisterOrder = () => {
     /* dispatch(addToCart({title: 'charlie', job: 'artist', price: 10})); */
-    dispatch(registerOrder());
+    registerOrder();
   }
 
   async function registerOrder() {
@@ -31,7 +29,6 @@ function Cart() {
         price: obj.price
       }));
       console.log(filteredObjArr);
-      setOrderObj((prevData) => [...prevData, filteredObjArr] );
       const response = await fetch('https://airbean-9pcyw.ondigitalocean.app/api/beans/order', {
       method: "POST",
       body: JSON.stringify({
@@ -45,7 +42,7 @@ function Cart() {
       });
       const data = await response.json();
       console.log(data);
-      dispatch(resetCart([]));
+      /* dispatch(resetCart([])); */
     } catch (error) {
       console.log(error);
     }

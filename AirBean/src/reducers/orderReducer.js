@@ -12,10 +12,14 @@ const cartSlice = createSlice({
     },
     resetCart(state, action) {
       return action.payload;
+    },
+    removeFromCart(state, action){
+      console.log(action.payload);
+      return action.payload;
     }
   }
 });
 
-export const { addToCart, resetCart } = cartSlice.actions
+export const { addToCart, resetCart, removeFromCart } = cartSlice.actions
 
 export default cartSlice.reducer;

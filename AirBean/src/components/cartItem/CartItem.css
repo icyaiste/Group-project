@@ -4,22 +4,38 @@
   color: rgba(47, 41, 38, 1);
   padding: 3% 0%;
 
-  .order__titleAndDots {
+  .order__titleDotsAndBtn {
     display: flex;
     justify-content: space-between;
-  }
+    align-items: center;
 
-  .order__itemName {
+    .titleDotsAndBtn__itemName {
     
+    }
+  
+    .titleDotsAndBtn__dots {
+      color: rgba(0, 0, 0, 0.4);
+    }
+  
+    .titleDotsAndBtn__removeBtn {
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 15px;
+    }
   }
 
-  .order__dots {
-    color: rgba(0, 0, 0, 0.4);
-  }
+  
 
   .order__itemPrice {
     text-align: start;
     font-size: 0.8rem;
     font-family: "Work Sans", sans-serif;
   }
+
+  
 }

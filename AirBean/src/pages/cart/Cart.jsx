@@ -45,7 +45,6 @@ function Cart() {
       });
       const data = await response.json();
       console.log(data);
-
       dispatch(resetCart([]));
     } catch (error) {
       console.log(error);

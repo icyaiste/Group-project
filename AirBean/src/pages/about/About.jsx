@@ -36,6 +36,7 @@ function About() {
         <h2>Eva Cortado</h2>
         <h3>VD & Grundare</h3>
       </section>
+      <br />
       <img src= {graphicsfooter} alt="footer image" />
     </div>
   )

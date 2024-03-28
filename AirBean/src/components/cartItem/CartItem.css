@@ -8,10 +8,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .titleDotsAndBtn__itemName {
-    
-    }
   
     .titleDotsAndBtn__dots {
       color: rgba(0, 0, 0, 0.4);
@@ -28,8 +24,6 @@
       margin-left: 15px;
     }
   }
-
-  
 
   .order__itemPrice {
     text-align: start;

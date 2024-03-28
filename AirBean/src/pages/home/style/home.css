@@ -3,10 +3,6 @@ main{
     flex-direction: column;
 }
 
-p{
-    text-transform: uppercase;
-}
-
 .content{
     display: flex;
 }

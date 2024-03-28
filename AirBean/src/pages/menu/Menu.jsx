@@ -3,10 +3,8 @@ import { useEffect, useState } from 'react';
 import MenuItem from '../../components/menuItem/MenuItem';
 import { useNavigate } from 'react-router-dom';
 import './Menu.css';
-import bag from '../../assets/assets/graphics/bag.svg';
-import navicon from '../../assets/assets/graphics/navicon.svg';
-import Cart from '../cart/Cart';
-
+import bag from '../../assets/graphics/bag.svg';
+import navicon from '../../assets/graphics/navicon.svg';
 
 function Menu() {
   const [menuItems, setMenuItems] = useState([]);
@@ -26,7 +24,6 @@ function Menu() {
   useEffect(() => {
     fetchMenuItems();
   }, []);
-
 
   function displayMenuItems() {
     return menuItems && menuItems.map((menuItem) => {
@@ -48,12 +45,11 @@ function Menu() {
     navigate("/cart");
   }
 
-
   return (
     <section className='menuSection'>
       <header className="menuSection__header">
         <button className="header__navBtn" onClick={ goToNavPage }><img src={ navicon } alt="Nav" /></button>
-        <button className="header__cartBtn" onClick={ goToCartPage }><img src={ bag } alt="Cart" /></button>
+        <button className="header__cartBtn" onClick={ goToCartPage }><img src={ bag } alt="Cart" /></button>       
       </header>
       <h1>Menu</h1>
       <div>{displayMenuItems()}</div>

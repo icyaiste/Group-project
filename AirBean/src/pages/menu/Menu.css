@@ -1,15 +1,22 @@
 .menuSection {
   background-color: rgba(243, 228, 225, 1);
   color: rgba(47, 41, 38, 1);
+  min-width: 350px;
+  width: 90vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .menuSection__header {
     background-color: rgba(243, 228, 225, 1);
     height: 113px;
     background-image: url(../../assets/assets/graphics/graphics-header.svg);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     margin: 0% 0% 5% 0%;
+    position: relative;
     
     .header__navBtn {
       background-color: white;
@@ -20,6 +27,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 0% 0% 0% 6%;
     }
 
     .header__navBtn:hover {
@@ -35,6 +43,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 0% 6% 0% 0%;
     }
   }
   
@@ -44,6 +53,8 @@
     background-image: url(../../assets/assets/graphics/graphics-footer.svg);
     margin: 5% 0% 0% 0%;
   }
+
+ 
 }
 
 

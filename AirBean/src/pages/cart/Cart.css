@@ -1,32 +1,97 @@
+.cartSection__header {
+  background-color: rgba(243, 228, 225, 1);
+    height: 113px;
+    background-image: url(../../assets/graphics/graphics-header.svg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0% 0% 0% 0%;
+    position: relative;
+
+    .header__navBtn {
+      background-color: white;
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0% 0% 0% 6%;
+    }
+
+    .header__navBtn:hover {
+      background-color: rgb(219, 219, 219);
+    }
+  
+    .header__cartBtn {
+      color: white;
+      width: 60px;
+      height: 60px;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0% 6% 0% 0%;
+      position: relative;
+
+      .cartBtn__count {
+        height: 25px;
+        width: 25px;
+        padding: 5px;
+        background-color: rgba(229, 103, 78, 1);
+        border-radius: 50%;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+      }
+
+      .cart__arrow {
+        width: clamp(30px, 3vw, 50px);
+        height: clamp(30px, 3vw, 50px);
+        background-color: white;
+        position: absolute;
+        top: 95%;
+        transform: rotate(45deg);
+      }
+    }
+}
+
 .cart {
   background-color: white;
   color: rgba(47, 41, 38, 1);
-  padding: 10%;
-  width: fit-content;
+  padding: 5%;
+  width: 80vw;
+  min-width: 320px;
+  height: 77vh;
   border-radius: 3px;
+  transform: translateY(-3%);
+  margin: 0 auto;
+  z-index: 5;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
 
   .cart__title {
-    
+    margin-bottom: 5%;
   }
 
-  .cart__orderSection {
-
+  .cart__wrapperCostAndBtn {
+    margin-top: auto;
   }
 
   .cart__costContainer {
     display: flex;
     justify-content: space-between;
-
-    .costContainer__totalText {
-
-    }
+    margin: auto;
 
     .costContainer__dots {
       color: rgba(0, 0, 0, 0.4);
-    }
-
-    .costContainer__totalPrice {
-
     }
   }
 
@@ -39,10 +104,11 @@
     background-color: rgba(47, 41, 38, 1);
     color: white;
     padding: 4% 8%;
-    border-radius: 15px;
+    border-radius: 25px;
     border: none;
     font-weight: 600;
-    margin: 5% 0;
+    font-size: 1.2rem;
+    margin: 15% 0 5% 0%;
   }
 
   .cart__orderBtn:hover {
@@ -53,3 +119,4 @@
     transform: scale(98%);
   }
 }
+

@@ -4,17 +4,25 @@
   color: rgba(47, 41, 38, 1);
   padding: 3% 0%;
 
-  .order__titleAndDots {
+  .order__titleDotsAndBtn {
     display: flex;
     justify-content: space-between;
-  }
-
-  .order__itemName {
-    
-  }
-
-  .order__dots {
-    color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+  
+    .titleDotsAndBtn__dots {
+      color: rgba(0, 0, 0, 0.4);
+    }
+  
+    .titleDotsAndBtn__removeBtn {
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 15px;
+    }
   }
 
   .order__itemPrice {
@@ -22,4 +30,6 @@
     font-size: 0.8rem;
     font-family: "Work Sans", sans-serif;
   }
+
+  
 }

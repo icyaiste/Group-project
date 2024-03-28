@@ -1,16 +1,12 @@
 import React from 'react';
-import { useState } from 'react';
 import { addToCart } from '../../reducers/orderReducer';
 import { useDispatch } from 'react-redux';
-
+import './MenuItem.css';
 
 function MenuItem(props) {
   const { menuItem } = props;
 
   const dispatch = useDispatch();
-
-  const [cartItems, setCartItems] = useState([]);
-
 
   const addedToCart = () => {
     dispatch(addToCart(menuItem))
@@ -18,12 +14,12 @@ function MenuItem(props) {
 
   return (
     <div key={menuItem.id} >
-      <button className='addToCartBtn' onClick={addedToCart}>Add</button>
       <article>
         <h2>{menuItem.title}</h2>
-        <p>{menuItem.price}</p>
+        <p>{menuItem.price} kr</p>
       </article>
       <p>{menuItem.desc}</p>
+      <button className='addToCartBtn' onClick={addedToCart}>+</button>
     </div>
   )
 }

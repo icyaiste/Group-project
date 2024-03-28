@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './styling/navigation.css';
 import close from "./images/close.svg"
 
@@ -7,29 +7,21 @@ function Navigation() {
 
   const navigate = useNavigate();
 
-  const goToMenuPage = () => {
-    navigate("/menu");
-  }
-
-  const goToAboutPage = () => {
-    navigate("/about");
-  }
-
-  const goToStatusPage = () => {
-    navigate("/status");
+  const goToStartPage = () => {
+    navigate("/");
   }
 
   return (
     <main className='main_nav' >
-      <nav className='closingBtn'>
+      <button className='closingBtn' onClick={ goToStartPage }>
         <img src={close} alt="closing button" />
-      </nav>
+      </button>
       <section className='content'>
-        <p onClick={goToMenuPage} className='page_1'>Meny</p>
+        <Link to="/menu" className='page_1'>Meny</Link>
         <hr /><br />
-        <p onClick={goToAboutPage} className='page_2'>Vårt kaffe</p>
+        <Link to="/about" className='page_2'>Vårt kaffe</Link>
         <hr /><br />
-        <p onClick={goToStatusPage} className='page_3'>Orderstatus</p>
+        <Link to="/status" className='page_3'>Orderstatus</Link>
         <hr /><br />
       </section>
     </main>

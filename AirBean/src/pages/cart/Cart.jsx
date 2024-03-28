@@ -87,12 +87,13 @@ function Cart() {
       <header className="cartSection__header">
         <button className="header__navBtn" onClick={ goToNavPage }><img src={ navicon } alt="Nav" /></button>
         <button className="header__cartBtn" onClick={ goToMenuPage }><img src={ bag } alt="Cart" />
-          <div className="cart__arrow"></div>
+        <div className="cartBtn__count">{ cartItems.length }</div>
+        <div className="cart__arrow"></div>
         </button>
       </header> 
         <section className='cart'>
           <h2 className="cart__title">Din&nbsp;beställning</h2>
-          <section className="cart__orderSection">{ items }</section>
+          <section className="cart__orderSection">{items.length > 0 ? items : 'Här var det tomt!' }</section>
           <div className="cart__wrapperCostAndBtn">
             <section className="cart__costContainer">
               <h4 className="costContainer__totalText">Total</h4>

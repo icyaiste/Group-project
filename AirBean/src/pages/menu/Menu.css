@@ -11,7 +11,7 @@
   .menuSection__header {
     background-color: rgba(243, 228, 225, 1);
     height: 113px;
-    background-image: url(../../assets/assets/graphics/graphics-header.svg);
+    background-image: url(../../assets/graphics/graphics-header.svg);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +50,7 @@
   .menuSection__footer {
     background-color: rgba(243, 228, 225, 1);
     height: 73px;
-    background-image: url(../../assets/assets/graphics/graphics-footer.svg);
+    background-image: url(../../assets/graphics/graphics-footer.svg);
     margin: 5% 0% 0% 0%;
   }
 

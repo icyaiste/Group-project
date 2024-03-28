@@ -12,10 +12,18 @@ const cartSlice = createSlice({
     },
     resetCart(state, action) {
       return action.payload;
+    },
+    saveCart(state, action) {
+      console.log('inside save cart');
+      return [...state, action.payload]
+    },
+    readOrder(){
+      
+       return [ initialState];
     }
   }
 });
 
-export const { addToCart, resetCart } = cartSlice.actions
+export const { addToCart, resetCart,saveCart,readOrder } = cartSlice.actions
 
 export default cartSlice.reducer;

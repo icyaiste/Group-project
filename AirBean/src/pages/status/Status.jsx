@@ -2,15 +2,22 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import './style/status.css'
 import drone from './images/drone.svg'
-import {loadFromLocalStorage} from '../../store/store'
+import { useDispatch, useSelector } from 'react-redux';
+import { readOrder } from '../../reducers/orderReducer';
+
 
 function Status() {
-  const data =  loadFromLocalStorage();
+  const savData = () => {
+    const userData = useSelector(state => state.userData);
+    const dispatch = useDispatch();
   
+    useEffect(() => {
+      // Simulating data fetching
+      const fetchedUserData = { orderNr: '', eta: '' };
+      dispatch(setUserData(fetchedUserData));
+    }, [dispatch]);
   
-
-
-    
+  }
   return (
     <div className='main'>
       <div className='img_para'>

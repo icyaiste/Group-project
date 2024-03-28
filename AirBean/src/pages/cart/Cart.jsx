@@ -1,10 +1,10 @@
 import './Cart.css';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, resetCart } from '../../reducers/orderReducer';
+import { addToCart, resetCart, saveCart } from '../../reducers/orderReducer';
 import CartItem from '../../components/cartItem/CartItem';
 
-import {saveToLocalStorage} from '../../store/store';
+//import {saveToLocalStorage} from '../../store/store';
 
 function Cart() {
 
@@ -47,8 +47,10 @@ function Cart() {
       });
       const data = await response.json();
       console.log(data);
-       dispatch(saveToLocalStorage(data));
+       //dispatch(saveToLocalStorage(data));
+       dispatch(saveCart(data));
       dispatch(resetCart([]));
+
     } catch (error) {
       console.log(error);
     }

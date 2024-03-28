@@ -1,0 +1,7 @@
+.main_home{
+    background-color: rgba(56, 132, 109, 1);
+    width: 575px;
+    display: flex;
+.logo{
+    align-items: center;
+}

@@ -7,7 +7,7 @@ import { readOrder } from '../../reducers/orderReducer';
 
 
 function Status() {
-  const savData = () => {
+  const saveData = () => {
     const userData = useSelector(state => state.userData);
     const dispatch = useDispatch();
   

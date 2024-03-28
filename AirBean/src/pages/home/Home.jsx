@@ -1,6 +1,9 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import './style/home.css';
+import "./home.css";
+import landing from "./images/landing.svg";
+import left from "./images/left.svg";
+import right from "./images/right.svg"
 
 function Home() {
     const navigate = useNavigate();
@@ -11,10 +14,13 @@ function Home() {
 
     return (
         <main onClick={goToNavigation}>
-            <img src="" alt="AirBean logo" />
-            <h1>Air Bean</h1>
-            <p>Dronedelivered coffee</p>
-            <Link to="/navigation">To Navigation</Link>
+            <section className='main_home'>
+            
+             <img src={left} alt="" />
+             <img src= {landing}  alt="AirBean logo" className='logo'/>
+             <img src={right} alt="" />
+
+            </section>
         </main>
     )
 }

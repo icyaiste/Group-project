@@ -9,7 +9,7 @@ function CartItem(props) {
   const dispatch = useDispatch();
 
   const cartItems = useSelector((state) => state.cart);
-  console.log(cartItems);
+  /* console.log(cartItems); */
 
   const handleRemoveItem = () => {
     const itemIndex = cartItems.findIndex(obj => obj.id === id);

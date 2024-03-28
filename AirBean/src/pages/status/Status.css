@@ -1,20 +1,22 @@
-.main{
+.main {
     background-color: rgba(229, 103, 78, 1);
-  width: 375px;
-  display: flex;
-  justify-content: center;
+    min-width: 340px;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 5%;
 }
-.btn{
+.cool__btn {
     width: 184px;
     height: 55px;
-    border-radius: 25%;
+    border-radius: 25px;
     font-size: xx-large;
     display: block;
     margin: auto;
+    border: none;
 }
-.img_para{
+.img_para {
     margin-top: 150px;
 }

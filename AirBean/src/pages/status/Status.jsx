@@ -1,28 +1,39 @@
-import React from 'react'
-import { useEffect, useState } from "react";
-import './style/status.css'
+import './Status.css'
 import drone from './images/drone.svg'
-import {loadFromLocalStorage} from '../../store/store'
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 function Status() {
-  const data =  loadFromLocalStorage();
-  
-  
 
+  const navigate = useNavigate();
 
-    
+  const orderData = useSelector((state) => state.orders);
+  console.log(orderData);
+
+  const goToNavPage = () => {
+    navigate("/navigation");
+  }
+  
   return (
-    <div className='main'>
-      <div className='img_para'>
-      <h4>Ordernummer {data.orderNr}</h4>
+    <main className='main'>
+      <section className='img_para'>
+      <h4>Ordernummer { orderData.orderNr }</h4>
       <br />
       <img src={drone} alt="drone" /><br />
-      <h1>Din beställning <br /> är på väg!</h1><br />
-      <h4>minuter {data.eta}</h4>
-      </div>
-      <button className='btn'>Ok, cool!</button>
-    </div>
+      <br />
+      { orderData === 'Ingen aktiv beställning finns' ? 
+      'Ingen aktiv beställning finns' : (
+      <article>
+        <h1>Din beställning är på väg!</h1>
+        <br />
+        <h4>Förväntad leverans om:</h4>
+        <h4>{orderData.eta} minuter</h4>
+      </article>)
+      }
+      </section>
+      <button className='cool__btn' onClick={ goToNavPage }>Ok, cool!</button>
+    </main>
   )
 }
 
-export default Status
+export default Status;

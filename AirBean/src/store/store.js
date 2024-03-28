@@ -2,18 +2,20 @@ import { configureStore } from "@reduxjs/toolkit";
 import resetCart from "../reducers/orderReducer";
 import addToCart from "../reducers/orderReducer";
 import removeFromCart from "../reducers/orderReducer";
+import sendOrder from "../reducers/statusReducer";
 
 
 const store = configureStore({
     reducer: {
         cart: resetCart,
         cart: addToCart,
-        cart: removeFromCart
+        cart: removeFromCart,
+        orders: sendOrder
     }
    
 });
 
-//function for local storage
+/* //function for local storage
 function saveToLocalStorage(state){
 
     try{
@@ -39,7 +41,7 @@ function saveToLocalStorage(state){
 
 
   store.subscribe(()=>saveToLocalStorage(store.getState()));
-  export  {saveToLocalStorage, loadFromLocalStorage};
+  export  {saveToLocalStorage, loadFromLocalStorage}; */
 
 export default store;
 

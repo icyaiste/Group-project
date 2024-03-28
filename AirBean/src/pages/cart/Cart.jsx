@@ -2,19 +2,18 @@ import './Cart.css';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, resetCart } from '../../reducers/orderReducer';
+import { sendOrder } from '../../reducers/statusReducer';
 import { useNavigate } from 'react-router-dom';
 import CartItem from '../../components/cartItem/CartItem';
 import bag from '../../assets/graphics/bag.svg';
 import navicon from '../../assets/graphics/navicon.svg';
-
-import {saveToLocalStorage} from '../../store/store';
 
 function Cart() {
 
   const [price, setPrice] = useState(0);
   
   const cartItems = useSelector((state) => state.cart);
-  console.log(cartItems);
+  /* console.log(cartItems); */
 
   const navigate = useNavigate();
 
@@ -27,6 +26,7 @@ function Cart() {
   const handleRegisterOrder = () => {
     /* dispatch(addToCart({title: 'charlie', job: 'artist', price: 10})); */
     registerOrder();
+    navigate("/status");
   }
 
   async function registerOrder() {
@@ -49,8 +49,8 @@ function Cart() {
       });
       const data = await response.json();
       console.log(data);
-       dispatch(saveToLocalStorage(data));
       dispatch(resetCart([]));
+      dispatch(sendOrder(data));
     } catch (error) {
       console.log(error);
     }

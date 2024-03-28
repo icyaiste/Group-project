@@ -15,7 +15,6 @@ function Menu() {
     try {
       const response = await fetch('https://airbean-9pcyw.ondigitalocean.app/api/beans')
       const data = await response.json();
-      console.log(data);
       setMenuItems(data.menu);
     } catch (error) {
       console.error('Error has occured', error);

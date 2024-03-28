@@ -21,7 +21,6 @@ function Status() {
     try {
       const response = await fetch(`https://airbean-9pcyw.ondigitalocean.app/api/beans/order/status/${orderData.orderNr}`, {
       method: "GET",
-      body: JSON.stringify(), 
       headers: {
         'Content-Type': 'application/json' 
         }
@@ -41,18 +40,19 @@ function Status() {
   
   return (
     <main className='main'>
-      <section className='img_para'>
-      <h4>Ordernummer { orderData.orderNr }</h4>
+      <section className='main__container'>
+      <p>Ordernummer <span className='fatText'>{ orderData.orderNr }</span></p>
+      <br />
       <br />
       <img src={drone} alt="drone" /><br />
       <br />
-      { orderData === 'Ingen aktiv beställning finns' ? 
-      'Ingen aktiv beställning finns' : (
-      <article>
+      { orderData === 'Ingen aktiv beställning finns' || !timeLeft ? 
+      <p>Ingen aktiv beställning finns</p> : 
+      (<article>
         <h1>Din beställning är på väg!</h1>
         <br />
-        <h4>Förväntad leverans om:</h4>
-        <h4>{ timeLeft } minuter</h4>
+        <p>Förväntad leverans om:</p>
+        <p><span className='fatText'>{ timeLeft }</span> minuter</p>
       </article>)
       }
       </section>

@@ -2,7 +2,8 @@
   background-color: white;
   color: rgba(47, 41, 38, 1);
   padding: 10%;
-  width: fit-content;
+  width: 90vw;
+  min-width: 320px;
   border-radius: 3px;
 
   .cart__title {

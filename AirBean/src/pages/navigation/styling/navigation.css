@@ -1,33 +1,44 @@
-#root{
-    padding: 0;
+.main_nav{
+    min-width: 320px;
+    /* height: 100vh;
+    width: 100vw; */
 }
-
-
-
-main_nav{
-    background-color: rgb(41, 34, 34);
-    width: 375px;
-    height: 100vh;
-    height: 100vh;
-    width: 100vw;
-}
-
 
 .content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 350px;
 }
 .page_1,.page_2,.page_3{
     font-size: 30px;
+    text-decoration: none;
+    margin: 5%;
 }
+
+.page_1:hover, .page_2:hover, .page_3:hover {
+    color: rgb(255, 255, 255);
+}
+
+
 .closingBtn{
    width: 50px;
-   
-   background-color: aliceblue;
+   height: 50px;
+   background-color: rgb(255, 255, 255);
+   border: none;
    border-radius: 50%;
+
+   img {
+    transform: scale(50%);
+   }
 }
+
+.closingBtn:hover {
+    background-color: rgb(219, 219, 219);
+ }
+
+.closingBtn:active {
+    transform: scale(96%);
+ }
 hr{
     width: 50px;
     background-color: rgba(255, 255, 255, 0.2);

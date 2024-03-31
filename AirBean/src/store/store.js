@@ -4,13 +4,14 @@ import saveCart  from "../reducers/orderReducer";
 import readOrder  from "../reducers/orderReducer";
 import addToCart from "../reducers/orderReducer";
 import removeFromCart from "../reducers/orderReducer";
-
+import sendOrder from "../reducers/statusReducer";
 
 const store = configureStore({
     reducer: {
         cart: resetCart,
         cart: addToCart,
-        cart: removeFromCart
+        cart: removeFromCart,
+        orders: sendOrder
     }
    
 });

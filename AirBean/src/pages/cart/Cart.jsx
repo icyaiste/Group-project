@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import CartItem from '../../components/cartItem/CartItem';
 import bag from '../../assets/graphics/bag.svg';
 import navicon from '../../assets/graphics/navicon.svg';
-
+import { sendOrder } from '../../reducers/statusReducer';
 //import {saveToLocalStorage} from '../../store/store';
 
 function Cart() {
@@ -27,6 +27,7 @@ function Cart() {
   const handleRegisterOrder = () => {
     /* dispatch(addToCart({title: 'charlie', job: 'artist', price: 10})); */
     registerOrder();
+    navigate("/status");
   }
 
   async function registerOrder() {
@@ -50,8 +51,9 @@ function Cart() {
       const data = await response.json();
       console.log(data);
        //dispatch(saveToLocalStorage(data));
-       dispatch(saveCart(data));
+      
       dispatch(resetCart([]));
+      dispatch(sendOrder(data));
 
     } catch (error) {
       console.log(error);

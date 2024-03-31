@@ -1,35 +1,64 @@
-import React from 'react'
-import { useEffect, useState } from "react";
-import './style/status.css'
+import { useEffect, useState } from 'react';
+import './Status.css'
 import drone from './images/drone.svg'
-import { useDispatch, useSelector } from 'react-redux';
-import { readOrder } from '../../reducers/orderReducer';
-
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 function Status() {
-  const saveData = () => {
-    const userData = useSelector(state => state.userData);
-    const dispatch = useDispatch();
-  
-    useEffect(() => {
-      // Simulating data fetching
-      const fetchedUserData = { orderNr: '', eta: '' };
-      dispatch(setUserData(fetchedUserData));
-    }, [dispatch]);
-  
+
+  const [timeLeft, setTimeLeft] = useState();
+
+  const orderData = useSelector((state) => state.orders);
+  console.log(orderData);
+
+  useEffect(() => {
+    getOrder()
+  }, [orderData]);
+
+  const navigate = useNavigate();
+
+  async function getOrder() {
+    try {
+      const response = await fetch(`https://airbean-9pcyw.ondigitalocean.app/api/beans/order/status/${orderData.orderNr}`, {
+      method: "GET",
+      headers: {
+        'Content-Type': 'application/json' 
+        }
+      });
+      const data = await response.json();
+      console.log(data);
+      setTimeLeft(data.eta);
+    } catch (error) {
+      console.log(error);
+    }
   }
+
+
+  const goToNavPage = () => {
+    navigate("/navigation");
+  }
+  
   return (
-    <div className='main'>
-      <div className='img_para'>
-      <h4>Ordernummer {data.orderNr}</h4>
+    <main className='main'>
+      <section className='main__container'>
+      <p>Ordernummer <span className='fatText'>{ orderData.orderNr }</span></p>
+      <br />
       <br />
       <img src={drone} alt="drone" /><br />
-      <h1>Din beställning <br /> är på väg!</h1><br />
-      <h4>minuter {data.eta}</h4>
-      </div>
-      <button className='btn'>Ok, cool!</button>
-    </div>
+      <br />
+      { orderData === 'Ingen aktiv beställning finns' || !timeLeft ? 
+      <p>Ingen aktiv beställning finns</p> : 
+      (<article>
+        <h1>Din beställning är på väg!</h1>
+        <br />
+        <p>Förväntad leverans om:</p>
+        <p><span className='fatText'>{ timeLeft }</span> minuter</p>
+      </article>)
+      }
+      </section>
+      <button className='cool__btn' onClick={ goToNavPage }>Ok, cool!</button>
+    </main>
   )
 }
 
-export default Status
+export default Status;

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './Status.css'
+import './style/status.css'
 import drone from './images/drone.svg'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';

@@ -15,11 +15,9 @@ function Home() {
     return (
         <main onClick={goToNavigation}>
             <section className='main_home'>
-            
-             <img src={left} alt="" />
-             <img src= {landing}  alt="AirBean logo" className='logo'/>
-             <img src={right} alt="" />
-
+                <img className='left_svg' src={left} alt="leaves" />
+                <img className='logo' src={landing} alt="AirBean logo" />
+                <img className='right_svg' src={right} alt="leaves" />
             </section>
         </main>
     )

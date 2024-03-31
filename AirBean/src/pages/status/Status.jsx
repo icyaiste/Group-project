@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import './style/status.css'
 import drone from './images/drone.svg'
 import { useDispatch, useSelector } from 'react-redux';
-import { readOrder } from '../../reducers/orderReducer';
+// import { readOrder } from '../../reducers/orderReducer';
 
 
 function Status() {

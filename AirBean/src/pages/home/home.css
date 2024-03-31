@@ -1,7 +1,30 @@
-.main_home{
+.main_home {
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(56, 132, 109, 1);
-    width: 575px;
     display: flex;
-.logo{
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
     align-items: center;
+
+    & .left_svg,
+    .right_svg {
+        height: 100vh;
+        width: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .right_svg {
+        left: 55vw;
+    }
+
+    & .logo {
+        width: 70%;
+        position: absolute;
+        z-index: 0;
+    }
 }

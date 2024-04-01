@@ -46,13 +46,13 @@ function Menu() {
   }
 
   return (
-    <section className='menuSection'>
-      <header className="menuSection__header">
-        <button className="header__navBtn" onClick={ goToNavPage }><img src={ navicon } alt="Nav" /></button>
-        <button className="header__cartBtn" onClick={ goToCartPage }><img src={ bag } alt="Cart" /></button>       
+    <section className='menu_wrapper'>
+      <header className="menu__header">
+        <button className="header__navBtn" onClick={goToNavPage}><img src={navicon} alt="Nav" /></button>
+        <button className="header__cartBtn" onClick={goToCartPage}><img src={bag} alt="Cart" /></button>
       </header>
-      <h1>Menu</h1>
-      <div>{displayMenuItems()}</div>
+      <h1 className='menu_title'>Meny</h1>
+      <div className='menu_items'>{displayMenuItems()}</div>
       <footer className='menuSection__footer'></footer>
     </section>
   )

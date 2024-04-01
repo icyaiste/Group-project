@@ -13,13 +13,13 @@ function MenuItem(props) {
   }
 
   return (
-    <div key={menuItem.id} >
-      <article>
-        <h2>{menuItem.title}</h2>
-        <p>{menuItem.price} kr</p>
-      </article>
-      <p>{menuItem.desc}</p>
+    <div className='item_wrapper' key={menuItem.id} >
       <button className='addToCartBtn' onClick={addedToCart}>+</button>
+      <article className='item_name'>
+        <h2>{menuItem.title}</h2>
+        <p className='item_name__info'>{menuItem.desc}</p>
+      </article>
+      <h2 className='item_price'>{menuItem.price} kr</h2>
     </div>
   )
 }

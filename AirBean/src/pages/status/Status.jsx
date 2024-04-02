@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import './style/status.css'
+import './Status.css'
 import drone from './images/drone.svg'
 import { useDispatch, useSelector } from 'react-redux';
-// import { readOrder } from '../../reducers/orderReducer';
 
 
 import { useNavigate } from 'react-router-dom';
@@ -38,23 +37,25 @@ function Status() {
 
 
   const goToNavPage = () => {
-    navigate("/navigation");
+    timeLeft > 0 ? navigate("/navigation") : navigate("/menu");
   }
 
   return (
     <main className='main'>
-      <section className='main__container'>
-        <p>Ordernummer #<span className='fatText'>{orderData.orderNr}</span></p>
+      <section className='mainContainer'>
+        <p className='mainContainer__orderNr'>Ordernummer #<span className='fatText'>{orderData.orderNr}</span></p>
         <br />
         <br />
         <img src={drone} alt="drone" /><br />
         <br />
         {orderData === 'Ingen aktiv beställning finns' || !timeLeft ?
-          <p>Ingen aktiv beställning finns</p> :
-          (<article>
-            <h1 className='status_text'>Din beställning är på väg!</h1>
+          (<article className='deliveryInfoContainer'>
+          <p className='status__text'>Ingen aktiv beställning finns</p>
+          </article>) :
+          (<article className='deliveryInfoContainer'>
+            <h1 className='status__text'>Din beställning är på väg!</h1>
             <br />
-            <p><span className='eta'>{timeLeft}</span> minuter</p>
+            <p className='deliveryInfoContainer__timeLeft'><span className='eta'>{timeLeft}</span> minuter</p>
           </article>)
         }
       </section>

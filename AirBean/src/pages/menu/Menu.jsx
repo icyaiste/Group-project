@@ -5,11 +5,14 @@ import { useNavigate } from 'react-router-dom';
 import './Menu.css';
 import bag from '../../assets/graphics/bag.svg';
 import navicon from '../../assets/graphics/navicon.svg';
+import { useSelector } from 'react-redux';
 
 function Menu() {
   const [menuItems, setMenuItems] = useState([]);
 
   const navigate = useNavigate();
+
+  const cartItems = useSelector((state) => state.cart);
 
   async function fetchMenuItems() {
     try {
@@ -46,13 +49,15 @@ function Menu() {
   }
 
   return (
-    <section className='menu_wrapper'>
+    <section className='menu__wrapper'>
       <header className="menu__header">
         <button className="header__navBtn" onClick={goToNavPage}><img src={navicon} alt="Nav" /></button>
-        <button className="header__cartBtn" onClick={goToCartPage}><img src={bag} alt="Cart" /></button>
+        <button className="header__cartBtn" onClick={goToCartPage}><img src={bag} alt="Cart" />
+          <div className="cartBtn__count">{ cartItems.length }</div>
+        </button>
       </header>
-      <h1 className='menu_title'>Meny</h1>
-      <div className='menu_items'>{displayMenuItems()}</div>
+      <h1 className='menu__title'>Meny</h1>
+      <div className='menu__items'>{displayMenuItems()}</div>
       <footer className='menuSection__footer'></footer>
     </section>
   )

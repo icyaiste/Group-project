@@ -87,7 +87,7 @@ function Cart() {
 
   return (
 
-    <section className='menuSection'>
+    <section className='cartSection'>
       <header className="cartSection__header">
         <button className="header__navBtn" onClick={ goToNavPage }><img src={ navicon } alt="Nav" /></button>
         <button className="header__cartBtn" onClick={ goToMenuPage }><img src={ bag } alt="Cart" />
@@ -101,8 +101,12 @@ function Cart() {
           <div className="cart__wrapperCostAndBtn">
             <section className="cart__costContainer">
               <h4 className="costContainer__totalText">Total</h4>
-              <p className="costContainer__dots">................</p>
-              <h4 className="costContainer__totalPrice">{ price } kr</h4>
+              <p className="costContainer__dots">
+                ............................................................................................................................................................................................................................................................................
+              </p>
+              <div className="priceContainer">
+                <h4 className="costContainer__totalPrice">{ price } kr</h4>
+              </div>
             </section>
             <p className="cart__costRelatedInfo">inkl&nbsp;moms&nbsp;+&nbsp;drönarleverans</p>
             <button className="cart__orderBtn" onClick={ handleRegisterOrder }>Take my money!</button>

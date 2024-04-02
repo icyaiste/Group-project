@@ -34,3 +34,10 @@ a, button {
   cursor: pointer;
 }
 
+button:active {
+  transform: scale(96%);
+}
+
+p {
+  font-family: 'Work Sans', sans-serif;
+}

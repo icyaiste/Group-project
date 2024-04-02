@@ -1,6 +1,7 @@
 import './CartItem.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart } from '../../reducers/orderReducer';
+import close from '../../assets/graphics/close.svg';
 
 function CartItem(props) {
 
@@ -22,14 +23,18 @@ function CartItem(props) {
   }
 
   return(
-    <article className='order'>
-      <section className="order__titleDotsAndBtn">
+    <article className='orderItem'>
+      <section className="orderItem__titleDotsAndBtn">
         <h4 className="titleDotsAndBtn__itemName">{ title }</h4>
-        <p className="titleDotsAndBtn__dots">.................</p>
-        <button className="titleDotsAndBtn__removeBtn" onClick={ handleRemoveItem }>X</button>
+        <p className="titleDotsAndBtn__dots">
+          .........................................................................................................................................................................................................................................................................................................................................................................................
+        </p>
+        <div className='btnContainer'>
+          <button className="titleDotsAndBtn__removeBtn" onClick={ handleRemoveItem }><img src={ close } alt="" srcset="" /></button>
+        </div>
       </section>
       
-      <p className="order__itemPrice">{ price } kr</p>
+      <p className="orderItem__itemPrice">{ price } kr</p>
       
     </article>
   );
